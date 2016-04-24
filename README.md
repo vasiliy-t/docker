@@ -14,7 +14,7 @@ docker run --rm \
     leanlabs/docker
 ```
 
-Push docker image to docker hub:
+Publish docker image to docker hub:
 
 ```shell
 docker run --rm \
