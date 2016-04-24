@@ -36,4 +36,4 @@ docker run --rm \
 
 **IMAGE**  - image to push
 
-**IMAGE**  - image tag
+**TAG**  - image tag
