@@ -8,6 +8,7 @@ Build docker image:
 
 ```shell
 docker run --rm \
+    -v /var/run/docker.sock:/var/run/docker.sock \
     -e COMMAND=build \
     -e IMAGE=image_to/build \
     -e TAG=1.0.0 \
@@ -18,7 +19,8 @@ Publish docker image to docker hub:
 
 ```shell
 docker run --rm \
-    -e COMMAND=publish \
+    -v /var/run/docker.sock:/var/run/docker.sock \
+    -e COMMAND=push \
     -e IMAGE=image_to/publish
     -e TAG=tag_name \
     -e REGISTRY_HOST=my.selfhosted.registry.com \
@@ -29,7 +31,7 @@ docker run --rm \
 
 ### Environment variables
 
-**COMMAND**  - command to execute, build | publish
+**COMMAND**  - command to execute, build | push
 
 **REGISTRY_HOST** - registry hostname
 
