@@ -1,5 +1,5 @@
 #!/bin/sh
 
-docker login --username=$DOCKER_HUB_USERNAME --password=$DOCKER_HUB_PASSWORD
+docker login --username=$REGISTRY_USERNAME --password=$REGISTRY_PASSWORD $REGISTRY_HOST
 
 docker push $IMAGE:$TAG

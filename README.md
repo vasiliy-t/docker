@@ -21,8 +21,9 @@ docker run --rm \
     -e COMMAND=publish \
     -e IMAGE=image_to/publish
     -e TAG=tag_name \
-    -e DOCKER_HUB_USERNAME=YOUR_DOCKER_HUB_USERNAME \
-    -e DOCKER_HUB_PASSWORD=YOUR_DOCKER_HUB_PASSWORD \
+    -e REGISTRY_HOST=my.selfhosted.registry.com \
+    -e REGISTRY_USERNAME=YOUR_DOCKER_HUB_USERNAME \
+    -e REGISTRY_PASSWORD=YOUR_DOCKER_HUB_PASSWORD \
     leanlabs/docker
 ```
 
@@ -30,9 +31,11 @@ docker run --rm \
 
 **COMMAND**  - command to execute, build | publish
 
-**DOCKER_HUB_USERNAME** - your docker hub account username
+**REGISTRY_HOST** - registry hostname
 
-**DOCKER_HUB_PASSWORD** - your docker hub account password
+**REGISTRY_USERNAME** - your docker hub account username
+
+**REGISTRY_PASSWORD** - your docker hub account password
 
 **IMAGE**  - image to push
 

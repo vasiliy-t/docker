@@ -1,8 +1,9 @@
 FROM alpine:3.3
 
 ENV COMMAND=build \
-    DOCKER_HUB_USERNAME="qwerty" \
-    DOCKER_HUB_PASSWORD="qwerty" \
+    REGISTRY_HOST="docker.io" \
+    REGISTRY_USERNAME="qwerty" \
+    REGISTRY_PASSWORD="qwerty" \
     IMAGE="namespace/image" \
     TAG="latest"
 
